@@ -2,9 +2,11 @@ package edu.utsa.cs3443.mealmarker;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.TextArea;
-import javafx.scene.control.TextField;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.VBox;
+import javafx.scene.text.Text;
 
 public class UserGuideController {
     private Window[] windows;
@@ -62,10 +64,25 @@ public class UserGuideController {
     private VBox windowVBox;
 
     @FXML
-    private TextField titleTextField;
+    private Label titleLabel;
 
     @FXML
-    private TextArea infoTextArea;
+    private Text infoText;
+
+    @FXML
+    private Button gettingStartedButton;
+
+    @FXML
+    private Button editingPreferencesButton;
+
+    @FXML
+    private Button understandingBudgetButton;
+
+    @FXML
+    private Button locatingNutritionInfoButton;
+
+    @FXML
+    private Button featuresButton;
 
     @FXML
     public void onGettingStartedButtonClicked(ActionEvent event){
@@ -97,18 +114,138 @@ public class UserGuideController {
         closeWindow();
     }
 
+    @FXML
+    public void onGettingStartedButtonHover(MouseEvent event){
+        gettingStartedButton.setStyle(
+                "-fx-background-color: #032044; " +
+                        "-fx-background-radius: 27; " +
+                        "-fx-border-style: solid; " +
+                        "-fx-border-radius: 23; " +
+                        "-fx-border-color: #F15A22; " +
+                        "-fx-border-width: 3;"
+        );
+    }
+
+    @FXML
+    public void onEditingPreferencesButtonHover(MouseEvent event){
+        editingPreferencesButton.setStyle(
+                "-fx-background-color: #F15A22; " +
+                        "-fx-background-radius: 8; " +
+                        "-fx-border-style: solid; " +
+                        "-fx-border-radius: 8; " +
+                        "-fx-border-color: #032044; " +
+                        "-fx-border-width: 3;"
+        );
+    }
+
+    @FXML
+    public void onUnderstandingBudgetButtonHover(MouseEvent event){
+        understandingBudgetButton.setStyle(
+                "-fx-background-color: #F15A22; " +
+                        "-fx-background-radius: 8; " +
+                        "-fx-border-style: solid; " +
+                        "-fx-border-radius: 8; " +
+                        "-fx-border-color: #032044; " +
+                        "-fx-border-width: 3;"
+        );
+    }
+
+    @FXML
+    public void onLocatingNutritionInfoButtonHover(MouseEvent event){
+        locatingNutritionInfoButton.setStyle(
+                "-fx-background-color: #F15A22; " +
+                        "-fx-background-radius: 8; " +
+                        "-fx-border-style: solid; " +
+                        "-fx-border-radius: 8; " +
+                        "-fx-border-color: #032044; " +
+                        "-fx-border-width: 3;"
+        );
+    }
+
+    @FXML
+    public void onFeaturesButtonHover(MouseEvent event){
+        featuresButton.setStyle(
+                "-fx-background-color: #F15A22; " +
+                        "-fx-background-radius: 8; " +
+                        "-fx-border-style: solid; " +
+                        "-fx-border-radius: 8; " +
+                        "-fx-border-color: #032044; " +
+                        "-fx-border-width: 3;"
+        );
+    }
+
+    @FXML
+    public void onGettingStartedButtonExit(MouseEvent event){
+        gettingStartedButton.setStyle(
+                "-fx-background-color: #032044; " +
+                        "-fx-background-radius: 27; " +
+                        "-fx-border-style: solid; " +
+                        "-fx-border-radius: 23; " +
+                        "-fx-border-color: #F15A22; " +
+                        "-fx-border-width: 0;"
+        );
+    }
+
+    @FXML
+    public void onEditingPreferencesButtonExit(MouseEvent event){
+        editingPreferencesButton.setStyle(
+                "-fx-background-color: #F15A22; " +
+                        "-fx-background-radius: 8; " +
+                        "-fx-border-style: solid; " +
+                        "-fx-border-radius: 8; " +
+                        "-fx-border-color: #032044; " +
+                        "-fx-border-width: 0;"
+        );
+    }
+
+    @FXML
+    public void onUnderstandingBudgetButtonExit(MouseEvent event){
+        understandingBudgetButton.setStyle(
+                "-fx-background-color: #F15A22; " +
+                        "-fx-background-radius: 8; " +
+                        "-fx-border-style: solid; " +
+                        "-fx-border-radius: 8; " +
+                        "-fx-border-color: #032044; " +
+                        "-fx-border-width: 0;"
+        );
+    }
+
+    @FXML
+    public void onLocatingNutritionInfoButtonExit(MouseEvent event){
+        locatingNutritionInfoButton.setStyle(
+                "-fx-background-color: #F15A22; " +
+                        "-fx-background-radius: 8; " +
+                        "-fx-border-style: solid; " +
+                        "-fx-border-radius: 8; " +
+                        "-fx-border-color: #032044; " +
+                        "-fx-border-width: 0;"
+        );
+    }
+
+    @FXML
+    public void onFeaturesButtonExit(MouseEvent event){
+        featuresButton.setStyle(
+                "-fx-background-color: #F15A22; " +
+                        "-fx-background-radius: 8; " +
+                        "-fx-border-style: solid; " +
+                        "-fx-border-radius: 8; " +
+                        "-fx-border-color: #032044; " +
+                        "-fx-border-width: 0;"
+        );
+    }
+
     // TODO: Ensure window is scaled to fit text
     @FXML
     public void displayWindow(Window window){
-        titleTextField.setText(window.getTitle() + ":");
-        infoTextArea.setText(window.getInfo());
+        titleLabel.setText(window.getTitle() + ":");
+        infoText.setText(window.getInfo());
         windowVBox.setVisible(true);
     }
 
     @FXML
     public void closeWindow() {
         windowVBox.setVisible(false);
-        titleTextField.setText("");
-        infoTextArea.setText("");
+        titleLabel.setText("");
+        infoText.setText("");
     }
 }

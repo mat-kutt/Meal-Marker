@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.TextFlow?>
+
+<StackPane xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.utsa.cs3443.mealmarker.UserGuideController">
+   <children>
+      <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1671.0">
+         <bottom>
+            <Pane maxWidth="1.7976931348623157E308" prefHeight="22.0" prefWidth="1671.0" style="-fx-background-color: #F15A22;" BorderPane.alignment="CENTER" />
+         </bottom>
+         <top>
+            <BorderPane prefHeight="114.0" prefWidth="1671.0" style="-fx-background-color: #F15A22;" BorderPane.alignment="CENTER">
+               <left>
+                  <ImageView fitHeight="103.0" fitWidth="67.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+                     <image>
+                        <Image url="@../../../../images/white-utensils.png" />
+                     </image>
+                  </ImageView>
+               </left>
+               <center>
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="85.0" prefWidth="422.0" text="User Guide" textFill="WHITE" BorderPane.alignment="CENTER">
+                     <font>
+                        <Font name="Franklin Gothic Demi" size="70.0" />
+                     </font>
+                  </Label>
+               </center>
+               <right>
+                  <ImageView fitHeight="103.0" fitWidth="67.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+                     <image>
+                        <Image url="@../../../../images/white-utensils.png" />
+                     </image>
+                  </ImageView>
+               </right>
+               <padding>
+                  <Insets bottom="6.0" left="34.0" right="33.0" top="5.0" />
+               </padding>
+            </BorderPane>
+         </top>
+         <center>
+            <VBox alignment="CENTER" prefWidth="1671.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="gettingStartedButton" mnemonicParsing="false" onAction="#onGettingStartedButtonClicked" onMouseEntered="#onGettingStartedButtonHover" onMouseExited="#onGettingStartedButtonExit" prefHeight="294.0" prefWidth="1437.0" style="-fx-background-color: #032044; -fx-background-radius: 27; -fx-border-radius: 23; -fx-border-color: #F15A22; -fx-border-width: 0;" text="Getting Started" textFill="WHITE">
+                     <font>
+                        <Font name="Franklin Gothic Medium" size="48.0" />
+                     </font>
+                  </Button>
+                  <HBox alignment="CENTER" spacing="82.0">
+                     <children>
+                        <Button fx:id="editingPreferencesButton" mnemonicParsing="false" onAction="#onEditingPreferencesButtonClicked" onMouseEntered="#onEditingPreferencesButtonHover" onMouseExited="#onEditingPreferencesButtonExit" prefHeight="110.0" prefWidth="678.0" style="-fx-background-color: #F15A22; -fx-background-radius: 8; -fx-border-radius: 8; -fx-border-color: #032044; -fx-border-width: 0;" text="Editing Preferences" textFill="WHITE">
+                           <font>
+                              <Font name="Franklin Gothic Medium" size="32.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="understandingBudgetButton" mnemonicParsing="false" onAction="#onUnderstandingBudgetButtonClicked" onMouseEntered="#onUnderstandingBudgetButtonHover" onMouseExited="#onUnderstandingBudgetButtonExit" prefHeight="110.0" prefWidth="678.0" style="-fx-background-color: #F15A22; -fx-background-radius: 8; -fx-border-radius: 8; -fx-border-color: #032044; -fx-border-width: 0;" text="Understanding Budget" textFill="WHITE">
+                           <font>
+                              <Font name="Franklin Gothic Medium" size="32.0" />
+                           </font>
+                        </Button>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="110.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox alignment="CENTER" spacing="82.0">
+                     <children>
+                        <Button fx:id="locatingNutritionInfoButton" mnemonicParsing="false" onAction="#onLocatingNutritionInfoButtonClicked" onMouseEntered="#onLocatingNutritionInfoButtonHover" onMouseExited="#onLocatingNutritionInfoButtonExit" prefHeight="110.0" prefWidth="678.0" style="-fx-background-color: #F15A22; -fx-background-radius: 8; -fx-border-radius: 8; -fx-border-color: #032044; -fx-border-width: 0;" text="Locating Nutrition Info" textFill="WHITE">
+                           <font>
+                              <Font name="Franklin Gothic Medium" size="32.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="featuresButton" mnemonicParsing="false" onAction="#onFeaturesButtonClicked" onMouseEntered="#onFeaturesButtonHover" onMouseExited="#onFeaturesButtonExit" prefHeight="110.0" prefWidth="678.0" style="-fx-background-color: #F15A22; -fx-background-radius: 8; -fx-border-radius: 8; -fx-border-color: #032044; -fx-border-width: 0   ;" text="Features" textFill="WHITE">
+                           <font>
+                              <Font name="Franklin Gothic Medium" size="32.0" />
+                           </font>
+                        </Button>
+                     </children>
+                     <padding>
+                        <Insets top="73.0" />
+                     </padding>
+                  </HBox>
+               </children>
+            </VBox>
+         </center>
+      </BorderPane>
+      <VBox fx:id="windowVBox" alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="516.0" prefWidth="949.0" spacing="20.0" style="-fx-background-color: White; -fx-background-radius: 50; -fx-border-style: solid; -fx-border-radius: 48; -fx-border-color: #F15A22; -fx-border-width: 4;" visible="false">
+         <children>
+            <BorderPane prefHeight="200.0" prefWidth="200.0">
+               <right>
+                  <Button mnemonicParsing="false" onAction="#onCloseWindowButtonClicked" style="-fx-background-color: 0;" text="X" textFill="#f15a22" BorderPane.alignment="CENTER">
+                     <font>
+                        <Font name="Comic Sans MS" size="19.0" />
+                     </font></Button>
+               </right>
+               <left>
+                  <Label fx:id="titleLabel" text="Title:" textFill="#032044" BorderPane.alignment="CENTER">
+                     <font>
+                        <Font name="Franklin Gothic Demi Italic" size="32.0" />
+                     </font>
+                  </Label>
+               </left>
+               <bottom>
+                  <TextFlow maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="375.0" prefWidth="847.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <Text fx:id="infoText" strokeType="OUTSIDE" strokeWidth="0.0" text="Info">
+                           <font>
+                              <Font name="Franklin Gothic Medium" size="16.0" />
+                           </font>
+                        </Text>
+                     </children>
+                     <BorderPane.margin>
+                        <Insets top="15.0" />
+                     </BorderPane.margin>
+                  </TextFlow>
+               </bottom>
+            </BorderPane>
+         </children>
+         <padding>
+            <Insets bottom="50.0" left="50.0" right="50.0" top="50.0" />
+         </padding>
+         <StackPane.margin>
+            <Insets />
+         </StackPane.margin>
+      </VBox>
+   </children>
+</StackPane>
