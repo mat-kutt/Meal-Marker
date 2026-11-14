@@ -5,9 +5,9 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>edu.utsa.cs3443</groupId>
-    <artifactId>Meal-Marker</artifactId>
+    <artifactId>Fall2026-Demo-Project</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <name>Meal-Marker</name>
+    <name>Fall2026-Demo-Project</name>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -61,7 +61,7 @@
                         <id>default-cli</id>
                         <configuration>
                             <mainClass>
-                                edu.utsa.cs3443.mealmarker/edu.utsa.cs3443.mealmarker.MealMarkerApplication
+                                edu.utsa.cs3443.fall2026demoproject/edu.utsa.cs3443.fall2026demoproject.HelloApplication
                             </mainClass>
                             <launcher>app</launcher>
                             <jlinkZipName>app</jlinkZipName>

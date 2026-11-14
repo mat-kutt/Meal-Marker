@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="edu.utsa.cs3443.mealmarker.controller.CreateAccountController"
+            prefWidth="900" prefHeight="600">
+
+    <children>
+        <VBox alignment="CENTER"
+              spacing="14"
+              prefWidth="400"
+              AnchorPane.leftAnchor="250"
+              AnchorPane.topAnchor="55">
+
+            <padding>
+                <Insets top="25" right="35" bottom="25" left="35"/>
+            </padding>
+
+            <Label text="CREATE ACCOUNT"
+                   style="-fx-font-size: 28px; -fx-font-weight: bold;"/>
+
+            <Label text="Join Meal Maker and start planning your meals!"
+                   style="-fx-font-size: 13px;"/>
+
+            <TextField fx:id="usernameTextField"
+                       promptText="Username"
+                       prefHeight="40"/>
+
+            <TextField fx:id="studentIDTextField"
+                       promptText="Student ID"
+                       prefHeight="40"/>
+
+            <TextField fx:id="emailTextField"
+                       promptText="Student Email"
+                       prefHeight="40"/>
+
+            <PasswordField fx:id="passwordTextField"
+                           promptText="Password"
+                           prefHeight="40"/>
+
+            <PasswordField fx:id="confirmPasswordTextField"
+                           promptText="Confirm Password"
+                           prefHeight="40"/>
+
+            <Button text="Create Account"
+                    onAction="#createAccount"
+                    maxWidth="Infinity"
+                    prefHeight="40"/>
+
+            <Button text="Back to Login"
+                    onAction="#backToLogin"
+                    maxWidth="Infinity"/>
+
+        </VBox>
+    </children>
+</AnchorPane>
