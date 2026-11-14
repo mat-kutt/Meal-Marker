@@ -1,4 +1,4 @@
-package edu.utsa.cs3443.mealmarker.controller;
+package edu.utsa.cs3443.mealmarker;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;

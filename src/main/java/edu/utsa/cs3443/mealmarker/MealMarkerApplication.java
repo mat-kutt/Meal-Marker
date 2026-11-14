@@ -10,8 +10,8 @@ import java.io.IOException;
 public class MealMarkerApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(MealMarkerApplication.class.getResource("userguide.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 1671, 1080);
+        FXMLLoader fxmlLoader = new FXMLLoader(MealMarkerApplication.class.getResource("login-view.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
         stage.setScene(scene);
         stage.show();
     }
