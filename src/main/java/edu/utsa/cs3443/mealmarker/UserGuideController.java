@@ -9,11 +9,11 @@ import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
 
 public class UserGuideController {
-    private Window[] windows;
+    private WindowInfo[] windows;
 
     @FXML
     private void initialize(){
-        windows = new Window[5];
+        windows = new WindowInfo[5];
 
         String gettingStartedInfo = """
                 Welcome to Meal Marker!
@@ -53,11 +53,11 @@ public class UserGuideController {
                 + Editing profile info - Used to update your identity and/or password to maintain access to your saved information
                 """;
 
-        windows[0] = new Window("Getting Started", gettingStartedInfo);
-        windows[1] = new Window("Editing Preferences", editingPreferencesInfo);
-        windows[2] = new Window("Understanding Budget", understandingBudgetInfo);
-        windows[3] = new Window("Locating Nutrition Info", locatingNutritionInfo);
-        windows[4] = new Window("Features", featuresInfo);
+        windows[0] = new WindowInfo("Getting Started", gettingStartedInfo);
+        windows[1] = new WindowInfo("Editing Preferences", editingPreferencesInfo);
+        windows[2] = new WindowInfo("Understanding Budget", understandingBudgetInfo);
+        windows[3] = new WindowInfo("Locating Nutrition Info", locatingNutritionInfo);
+        windows[4] = new WindowInfo("Features", featuresInfo);
     }
 
     @FXML
@@ -236,9 +236,9 @@ public class UserGuideController {
 
     // TODO: Ensure window is scaled to fit text
     @FXML
-    public void displayWindow(Window window){
-        titleLabel.setText(window.getTitle() + ":");
-        infoText.setText(window.getInfo());
+    public void displayWindow(WindowInfo windowInfo){
+        titleLabel.setText(windowInfo.getTitle() + ":");
+        infoText.setText(windowInfo.getInfo());
         windowVBox.setVisible(true);
     }
 
