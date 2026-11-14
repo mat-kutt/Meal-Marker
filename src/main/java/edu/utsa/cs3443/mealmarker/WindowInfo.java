@@ -1,10 +1,10 @@
 package edu.utsa.cs3443.mealmarker;
 
-public class Window {
+public class WindowInfo {
     private final String title;
     private final String info;
 
-    public Window(String title, String info) {
+    public WindowInfo(String title, String info) {
         this.title = title;
         this.info = info;
     }
